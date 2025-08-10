@@ -29,7 +29,7 @@
 
         const wg = JSON.parse(
             Array.from(document.querySelector('.client-state').children)
-                .find(el => el.id.startsWith('state-webGallery'))
+                .find(el => el.id.startsWith('state-webGallery') || el.id.startsWith('state-webMobGallery'))
                 .dataset.state
         );
 
