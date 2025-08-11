@@ -17,7 +17,7 @@
     <div style="padding: 10px 10px 10px 10px;" class="ozdl-container">
         <h3 class="ozdl-title">ozon-dl // tsivxrev</h3>
         <h3 class="ozdl-state"></h3>
-        <input class="ozdl-token" placeholder="magic here">
+        <textarea style="width:100%" class="ozdl-token" placeholder="magic here">
     </div>
     `;
 
@@ -43,8 +43,8 @@
 
         state.innerHTML = `photos: ${wg.images.length}, videos: ${wg.videos.length}`
 
-        const images = wg.images.map(i => i.src).join(',');
-        const videos = wg.videos.map(i => i.url).join(',');
+        const images = wg.images.map(i => i.src)
+        const videos = wg.videos.map(i => i.url)
 
         token.value = JSON.stringify({ i: images, v: videos });
 
